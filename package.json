@@ -17,7 +17,8 @@
     "better-sqlite3": "7.4.6"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "gianlucaparadise",
+    "email": "gianlucaparadise@gmail.com"
   },
   "strapi": {
     "uuid": "49062b74-1191-4de6-95fc-019f25a754c4"
