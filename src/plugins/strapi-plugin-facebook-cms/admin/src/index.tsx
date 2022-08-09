@@ -29,6 +29,37 @@ export default {
         // },
       ],
     });
+
+    const settingsBaseName = `${pluginId}-settings`;
+    app.createSettingSection(
+      {
+        id: settingsBaseName,
+        intlLabel: {
+          id: `${settingsBaseName}.links-header`,
+          defaultMessage: name,
+        },
+      },
+      [
+        // links
+        {
+          intlLabel: {
+            id: `${settingsBaseName}.link-configuration-label`,
+            defaultMessage: "Configuration",
+          },
+          id: `${settingsBaseName}-link-configuration`,
+          to: `/settings/${pluginId}`,
+          Component: async () => {
+            const component = await import(
+              /* webpackChunkName: "[request]" */ "./pages/SettingsApp"
+            );
+
+            return component;
+          },
+          permissions: [],
+        },
+      ]
+    );
+
     const plugin = {
       id: pluginId,
       initializer: Initializer,

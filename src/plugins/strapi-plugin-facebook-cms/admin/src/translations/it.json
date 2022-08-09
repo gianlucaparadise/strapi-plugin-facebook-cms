@@ -1,3 +1,6 @@
 {
-  "facebook-cms.plugin.name": "Facebook per CMS"
+  "facebook-cms.plugin.name": "Facebook as a CMS",
+
+  "facebook-cms.links-header": "Facebook as a CMS",
+  "facebook-cms.link-configuration-label": "Configurazione"
 }
