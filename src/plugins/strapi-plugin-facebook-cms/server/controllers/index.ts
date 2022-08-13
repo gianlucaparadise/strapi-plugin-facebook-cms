@@ -1,5 +1,5 @@
-import myController from './my-controller';
+import config from "./config";
 
 export default {
-  myController,
+  config,
 };
