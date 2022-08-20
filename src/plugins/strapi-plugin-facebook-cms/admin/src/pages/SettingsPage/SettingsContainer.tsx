@@ -8,12 +8,14 @@ import { Flex } from "@strapi/design-system/Flex";
 
 import ExternalLink from "../../components/ExternalLink";
 import BoxField from "./BoxField";
+import EmptyState from "../../components/EmptyState";
 import { useFormattedMessageGetter } from "../../hooks/useFormattedMessageGetter";
 import { getConfig } from "../../utils/api";
 import type { GetConfigResponse } from "../../../../types";
 import type { ApiError } from "../../types";
 
 type Config = GetConfigResponse["data"];
+type EmptyStateType = React.ComponentProps<typeof EmptyState>["type"];
 
 const SettingsContainer: React.FC = () => {
   const getFormatterMessage = useFormattedMessageGetter();
@@ -64,10 +66,14 @@ const SettingsContainer: React.FC = () => {
   }
 
   if (apiError) {
+    const emptyStateType: EmptyStateType =
+      apiError === "FORBIDDEN"
+        ? "ERROR_AVAILABILITY_FORBIDDEN"
+        : "ERROR_CONFIG";
+
     return (
       <Box padding={8} background="neutral100">
-        {/* TODO: add empty state */}
-        {apiError}
+        <EmptyState type={emptyStateType} />
       </Box>
     );
   }

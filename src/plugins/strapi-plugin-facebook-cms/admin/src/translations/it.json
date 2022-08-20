@@ -10,5 +10,9 @@
   "settings-page.api-key.label": "API Key",
   "settings-page.api-key.placeholder": "Hai bisogno di impostare `apiKey` nelle configurazioni del plugin",
   "settings-page.api-key.learn-more-intro": "Le API Key possono essere create e gestite nelle",
-  "settings-page.api-key.learn-more-link-text": "impostationi del tuo profilo"
+  "settings-page.api-key.learn-more-link-text": "impostationi del tuo profilo",
+
+  "empty-state.error-forbidden": "Potresti non evere i giusti permessi",
+  "empty-state.error-config": "C'è stato un errore mentre venivano recuperate le configurazioni. Per favore, riprova.",
+  "empty-state.default": "C'è stato un errore inaspettato"
 }
