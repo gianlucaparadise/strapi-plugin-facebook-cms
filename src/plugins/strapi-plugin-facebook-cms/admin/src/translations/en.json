@@ -2,5 +2,13 @@
   "facebook-cms.plugin.name": "Facebook as a CMS",
 
   "facebook-cms.links-header": "Facebook as a CMS",
-  "facebook-cms.link-configuration-label": "Configuration"
+  "facebook-cms.link-configuration-label": "Configuration",
+
+  "settings-page.header.title": "Configuration",
+  "settings-page.header.subtitle": "Configure your Facebook as a CMS plugin",
+  "settings-page.settings-container.loader": "Loading settings...",
+  "settings-page.api-key.label": "API Key",
+  "settings-page.api-key.placeholder": "You need to set `apiKey` in plugin config",
+  "settings-page.api-key.learn-more-intro": "API Keys can be created and managed inside your",
+  "settings-page.api-key.learn-more-link-text": "account settings"
 }

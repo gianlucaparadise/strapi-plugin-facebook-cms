@@ -4,19 +4,26 @@
  *
  */
 
-import React, { useEffect } from "react";
-import pluginId from "../../pluginId";
-import { getConfig } from "../../utils/api";
+import React from "react";
 
-const SettingsPage: React.FunctionComponent = () => {
-  useEffect(() => {
-    getConfig().then(console.log).catch(console.log);
-  }, []);
+import { Box } from "@strapi/design-system/Box";
+import { HeaderLayout } from "@strapi/design-system/Layout";
+
+import SettingsContainer from "./SettingsContainer";
+import { useFormattedMessageGetter } from "../../hooks/useFormattedMessageGetter";
+
+const SettingsPage = () => {
+  const getFormattedMessage = useFormattedMessageGetter();
+  const headerTitle = getFormattedMessage("settings-page.header.title");
+  const headerSubtitle = getFormattedMessage("settings-page.header.subtitle");
+
   return (
-    <div>
-      <h1>{pluginId}&apos;s Settings Page</h1>
-      <p>Happy coding</p>
-    </div>
+    <>
+      <Box background="neutral100">
+        <HeaderLayout title={headerTitle} subtitle={headerSubtitle} as="h2" />
+      </Box>
+      <SettingsContainer />
+    </>
   );
 };
 
