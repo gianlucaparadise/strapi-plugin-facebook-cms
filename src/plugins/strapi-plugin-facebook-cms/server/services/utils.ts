@@ -1,8 +1,12 @@
-import { Strapi } from "@strapi/strapi";
+import type { Strapi } from "@strapi/strapi";
 
+import type { Config } from "../../types";
 import { getPluginConfigApiKey } from "../helpers/pluginConfig";
 
-export const buildConfig = (strapi: Strapi, hideSensitiveInfo = false) => {
+export const buildConfig = (
+  strapi: Strapi,
+  hideSensitiveInfo = false
+): Config => {
   const apiKey = getPluginConfigApiKey(strapi);
 
   return {
